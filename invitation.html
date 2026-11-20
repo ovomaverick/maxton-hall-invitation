@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Question For You ♡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="hearts">♡ ✧ ♡</div>
+
+        <h1 id="greeting">Hey, you!</h1>
+
+        <div class="card">
+
+            <p>I have something to ask you...</p>
+
+            <h1>♡</h1>
+
+            <h2>Would you like to watch Maxton Hall with me?</h2>
+
+            <p class="subtitle">
+                Just you, me and a little Maxton Hall marathon.
+            </p>
+
+            <div class="buttons">
+                <button onclick="sayYes()">YES!! ♡</button>
+                <button onclick="sayNo()">No? 🥺</button>
+            </div>
+
+            <p id="response"></p>
+
+        </div>
+
+        <p class="footer">A little invitation, just for you ♡</p>
+
+    </div>
+
+    <script>
+        let name = localStorage.getItem("visitorName") || "you";
+
+        document.getElementById("greeting").innerText =
+            "Hey, " + name + "! ♡";
+
+        function sayYes() {
+            document.getElementById("response").innerHTML =
+                "YAYYYY!! I was hoping you'd say yes! ♡";
+        }
+
+        function sayNo() {
+            document.getElementById("response").innerHTML =
+                "Awww, are you sure? 🥺";
+        }
+    </script>
+
+</body>
+</html>

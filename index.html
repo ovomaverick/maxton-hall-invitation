@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Surprise ♡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="hearts">♡ ♡ ♡</div>
+
+        <h1>Hey, you! 🙊</h1>
+
+        <p class="subtitle">
+            I have a little request...
+        </p>
+
+        <div class="card">
+            <p>But first, I need to know if you're down</p>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your name here..."
+            >
+
+            <button onclick="continuePage()">
+                Continue ♡
+            </button>
+        </div>
+
+        <p class="footer">Made with a little love ♡</p>
+    </div>
+
+    <script>
+        function continuePage() {
+            let name = document.getElementById("name").value.trim();
+
+            if (name === "") {
+                alert("You have to tell me your name first! ♡");
+                return;
+            }
+
+            localStorage.setItem("visitorName", name);
+            window.location.href = "invitation.html";
+        }
+    </script>
+</body>
+</html>
+
